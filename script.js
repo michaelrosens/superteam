@@ -12,8 +12,8 @@ const teamMembers = [
         'Lionel Messi is considered one of the greatest football players of all time...'
     },
     {
-      name: '2016 LeBron James',
-      position: 'Small Forward',
+      name: '1996 Michael Jordan',
+      position: 'Shooting Guard',
       skills: ['Dribbling', 'Shooting', 'Passing'],
       strengths: 'Ball control',
       weaknesses: 'Heading Ability',
@@ -23,6 +23,42 @@ const teamMembers = [
     {
         name: '2016 LeBron James',
         position: 'Small Forward',
+        skills: ['Dribbling', 'Shooting', 'Passing'],
+        strengths: 'Ball control',
+        weaknesses: 'Heading Ability',
+        biography:
+          'Lionel Messi is considered one of the greatest football players of all time...'
+      },
+      {
+        name: '2013 Kevin Durant',
+        position: 'Power Forward',
+        skills: ['Dribbling', 'Shooting', 'Passing'],
+        strengths: 'Ball control',
+        weaknesses: 'Heading Ability',
+        biography:
+          'Lionel Messi is considered one of the greatest football players of all time...'
+      },
+      {
+        name: '2023 Joel Embiid',
+        position: 'Center',
+        skills: ['Dribbling', 'Shooting', 'Passing'],
+        strengths: 'Ball control',
+        weaknesses: 'Heading Ability',
+        biography:
+          'Lionel Messi is considered one of the greatest football players of all time...'
+      },
+      {
+        name: '2008 Chris Paul',
+        position: 'Point Guard',
+        skills: ['Dribbling', 'Shooting', 'Passing'],
+        strengths: 'Ball control',
+        weaknesses: 'Heading Ability',
+        biography:
+          'Lionel Messi is considered one of the greatest football players of all time...'
+      },
+      {
+        name: '2000 Allen Iverson',
+        position: 'Shooting Guard',
         skills: ['Dribbling', 'Shooting', 'Passing'],
         strengths: 'Ball control',
         weaknesses: 'Heading Ability',
