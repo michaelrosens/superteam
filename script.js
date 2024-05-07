@@ -1,123 +1,102 @@
 const teamMembers = [
-    {
-      name: '2010 Derrick Rose',
-      img: MediaSession.jpg,
-      age: 22,
-      activelyPlaying: true,
-      position: 'Point Guard',
-      skills: ['Dribbling', 'Shooting', 'Passing'],
-      strengths: 'Finishing, Speed, Explosive Athleticism',
-      weaknesses: '3 point shooting, Turnover tendency',
-      biography:
-        'Lionel Messi is considered one of the greatest football players of all time...'
-    },
-    {
-      name: '1996 Michael Jordan',
-      position: 'Shooting Guard',
-      skills: ['Dribbling', 'Shooting', 'Passing'],
-      strengths: 'Ball control',
-      weaknesses: 'Heading Ability',
-      biography:
-        'Lionel Messi is considered one of the greatest football players of all time...'
-    },
-    {
-        name: '2016 LeBron James',
-        position: 'Small Forward',
-        skills: ['Dribbling', 'Shooting', 'Passing'],
-        strengths: 'Ball control',
-        weaknesses: 'Heading Ability',
-        biography:
-          'Lionel Messi is considered one of the greatest football players of all time...'
-      },
-      {
-        name: '2013 Kevin Durant',
-        position: 'Power Forward',
-        skills: ['Dribbling', 'Shooting', 'Passing'],
-        strengths: 'Ball control',
-        weaknesses: 'Heading Ability',
-        biography:
-          'Lionel Messi is considered one of the greatest football players of all time...'
-      },
-      {
-        name: '2023 Joel Embiid',
-        position: 'Center',
-        skills: ['Dribbling', 'Shooting', 'Passing'],
-        strengths: 'Ball control',
-        weaknesses: 'Heading Ability',
-        biography:
-          'Lionel Messi is considered one of the greatest football players of all time...'
-      },
-      {
-        name: '2008 Chris Paul',
-        position: 'Point Guard',
-        skills: ['Dribbling', 'Shooting', 'Passing'],
-        strengths: 'Ball control',
-        weaknesses: 'Heading Ability',
-        biography:
-          'Lionel Messi is considered one of the greatest football players of all time...'
-      },
-      {
-        name: '2000 Allen Iverson',
-        position: 'Shooting Guard',
-        skills: ['Dribbling', 'Shooting', 'Passing'],
-        strengths: 'Ball control',
-        weaknesses: 'Heading Ability',
-        biography:
-          'Lionel Messi is considered one of the greatest football players of all time...'
-      }
-  ]
+  {
+    name: '2010 Derrick Rose',
+    img: 'MediaSession.jpg',
+    age: 22,
+    activelyPlaying: true,
+    team: 'Bulls',
+    position: 'Point Guard',
+    skills: ['Dribbling', 'Shooting', 'Passing'],
+    strengths: 'Finishing, Speed, Explosive Athleticism',
+    weaknesses: '3 point shooting, Turnover tendency',
+    nickname: 'The Bull',
+    teammates: ['Joakim Noah', 'Luol Deng', 'Taj Gibson'],
+    accomplishments: 'MVP, Rookie of the Year, 3x All-Star',
+  },
+  {
+    name: '1996 Michael Jordan',
+    team: 'Bulls',
+    position: 'Shooting Guard',
+    skills: ['Dribbling', 'Shooting', 'Passing'],
+    strengths: 'Ball control',
+    weaknesses: 'Heading Ability',
+    nickname: 'Air Jordan',
+    teammates: ['Scottie Pippen', 'Dennis Rodman', 'Steve Kerr'],
+    accomplishments: '6x NBA Champion, 5x MVP, 6x Finals MVP',
+  },
+  {
+    name: '2016 LeBron James',
+    team: 'Cavaliers',
+    position: 'Small Forward',
+    skills: ['Scoring', 'Playmaking', 'Rebounding'],
+    strengths: 'Versatility',
+    weaknesses: 'Three-point shooting',
+    nickname: 'King James',
+    teammates: ['Kyrie Irving', 'Kevin Love', 'Tristan Thompson'],
+    accomplishments: '3x NBA Champion, 4x MVP, 3x Finals MVP',
+    
+  },
   
-  function generateTeamCards() {
-    const teamCardsContainer = document.getElementById('teamCards')
-  
-    teamMembers.forEach(member => {
-      const card = document.createElement('div')
-      card.classList.add('col-md-4')
-  
-      //styling card based on position:
-      let backgroundColor
-  
-      switch (member.position.toLowerCase()) {
-        case 'forward':
-          backgroundColor = '#ffc107' // Yellow for forwards
-          break
-        case 'midfielder':
-          backgroundColor = '#28a745' // Green for midfielders
-          break
-        case 'defender':
-          backgroundColor = '#007bff' // Blue for defenders
-          break
-        case 'goalkeeper':
-          backgroundColor = '#dc3545' // Red for goalkeepers
-          break
-        default:
-          backgroundColor = '#6c757d' // Gray for other positions
-      }
-      card.style.backgroundColor = backgroundColor
-  
-      //Create a list of Skills with <li> tags
-      const skillsList = member.skills
-        .map(skill => `<li> ${skill} </li>`).join('')
-  
-      card.innerHTML = `
-              <div class = "card">
-                  <div class = "card-header"> ${member.name}</div>
-                  <div class = "card-body">
-                      <p><strong>Position:</strong> ${member.position}</p>
-                      <p><strong>Skills:</strong> 
-                          <ul>
-                              ${skillsList}
-                          </ul>
-                      </p>
-                      <p><strong>Strengths:</strong> ${member.strengths}</p>
-                      <p><strong>Weaknesses:</strong> ${member.weaknesses}</p>
-                      <p><strong>Biography:</strong> ${member.biography}</p>
-                  </div>
+];
+
+function generateTeamCards() {
+  const teamCardsContainer = document.getElementById('teamCards');
+
+  teamMembers.forEach((member, index) => {
+    const card = document.createElement('div');
+    card.classList.add('col-md-4', 'mb-4'); // changed to col-md-2 for 5 cards per row
+
+    // styling card based on team:
+    let backgroundColor;
+
+    switch (member.team.toLowerCase()) {
+      case 'bulls':
+        backgroundColor = '#dc3545'; // Yellow for Bulls
+        break;
+      case 'cavaliers':
+        backgroundColor = '#8B0000'; // Green for Lakers
+        break;
+      case 'celtics':
+        backgroundColor = '#007bff'; // Blue for Celtics
+        break;
+      case 'heat':
+        backgroundColor = '#dc3545'; // Red for Heat
+        break;
+      default:
+        backgroundColor = '#6c757d'; // Gray for other teams
+    }
+    card.style.backgroundColor = backgroundColor;
+
+    // Create a list of teammates with <li> tags
+    const teammatesList = member.teammates
+     .map(teammate => `<li> ${teammate} </li>`)
+     .join('');
+
+    card.innerHTML = `
+          <div class="card">
+              <div class="card-header text-center"> 
+                <img src="${member.img}" alt="${member.name}" class="img-fluid mb-2">
+                <h5 class="card-title">${member.name}</h5>
+                <p class="card-subtitle mb-2 text-muted">${member.nickname}</p>
               </div>
-          `
-  
-      teamCardsContainer.appendChild(card)
-    })
-  }
-  
-  window.onload = generateTeamCards()
+              <div class="card-body">
+              <p><strong>Team:</strong> ${member.team}</p>
+
+                  <p><strong>Position:</strong> ${member.position}</p>
+                  <p><strong>Teammates:</strong> 
+                      <ul>
+                          ${teammatesList}
+                      </ul>
+                  </p>
+                  <p><strong>Strengths:</strong> ${member.strengths}</p>
+                  <p><strong>Weaknesses:</strong> ${member.weaknesses}</p>
+                  <p><strong>Accomplishments:</strong> ${member.accomplishments}</p>
+              </div>
+          </div>
+      `;
+
+    teamCardsContainer.appendChild(card);
+  });
+}
+
+window.onload = generateTeamCards();
