@@ -1,3 +1,11 @@
+function changeBackground(color) {
+  document.body.style.background = color;
+}
+
+window.addEventListener("load", function() {
+  document.body.style.background = 'linear-gradient(120deg, #f6d365 0%, #fda085 100%)';
+});
+
 const teamMembers = [
   {
     name: '2010 Derrick Rose',
@@ -102,7 +110,7 @@ function generateTeamCards() {
     }
 
     const card = document.createElement('div');
-    card.classList.add('col-md-2', 'mb-4', 'mx-auto');
+    card.classList.add('col-md-3', 'mb-4', 'mx-auto');
 
     let backgroundColor;
 
