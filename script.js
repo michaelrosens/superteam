@@ -24,7 +24,7 @@ const teamMembers = [
   },
   {
     name: '2000 Allen Iverson',
-    img: 'imgs/lue.jpg',
+    img: 'imgs/ai.jpg',
     team: 'Philadelphia 76ers',
     position: 'Shooting Guard',
     skills: ['Ball Handling', 'Scoring', 'Steals'],
@@ -69,7 +69,7 @@ const teamMembers = [
 },
 {
     name: '2023 Joel Embiid',
-    img: 'imgs/embiid.webp',
+    img: 'imgs/embiid.jpg',
     team: 'Philadelphia 76ers',
     position: 'Center',
     skills: ['Post Moves', 'Shooting', 'Defense'],
@@ -82,7 +82,7 @@ const teamMembers = [
   },
   {
 name: '2008 Chris Paul',
-img: 'imgs/cp3.webp',
+img: 'imgs/cp3.jpg',
 team: 'New Orleans Hornets',
 position: 'Point Guard',
 skills: ['Ball Handling', 'Passing', 'Shooting'],
@@ -92,7 +92,35 @@ weaknesses: 'Size and Strength',
 nickname: 'CP3',
 teammates: ['David West', 'Tyson Chandler', 'Peja Stojakovic'],
 accomplishments: 'NBA Rookie of the Year (2006). 9x NBA All-Star (2008-2016). 4x NBA assists leader (2008, 2009, 2014, 2017). 6x NBA steals leader (2008, 2009, 2011, 2012, 2014, 2017). All-NBA First Team (2008). 3x All-NBA Second Team (2012, 2013, 2015). 2x NBA All-Defensive First Team (2009, 2012). NBA All-Defensive Second Team (2008).'
+  },
+  {
+    name: "2016 Russell Westbrook",
+    img: "imgs/russ.jpg",
+    team: "Oklahoma City Thunder",
+    position: "Point Guard",
+    skills: ["Athleticism", "Explosiveness", "Rebounding"],
+    statline: ["31.6 PPG", "10.4 APG", "10.7 RPG"],
+    strengths: "Athleticism, Triple-Double Ability",
+    weaknesses: "Three-Point Shooting Efficiency",
+    nickname: "Russ",
+    teammates: ["Kevin Durant", "Steven Adams", "Enes Kanter"],
+    accomplishments: "NBA All-Star (2016). NBA All-Star Game MVP (2015, 2016). NBA Most Valuable Player (2017). 2x NBA All-Star Game MVP (2015, 2016). 2x NBA scoring champion (2015, 2017). NBA assists leader (2018). NBA All-Rookie Second Team (2009)."
+  },
+  {
+    name: "2018 Paul George",
+    img: "imgs/pg.jpg",
+    team: "Oklahoma City Thunder",
+    position: "Small Forward",
+    skills: ["Scoring", "Defense", "Three-Point Shooting"],
+    statline: ["28.0 PPG", "8.2 RPG", "4.1 APG", "2.2 SPG"],
+    strengths: "Scoring versatility, Defensive prowess",
+    weaknesses: "Occasional inconsistency in shooting efficiency",
+    nickname: "PG13",
+    teammates: ["Russell Westbrook", "Steven Adams", "Carmelo Anthony"],
+    accomplishments: "NBA All-Star (2013, 2014, 2016, 2017, 2018). All-NBA Third Team (2013, 2016). NBA All-Defensive First Team (2014, 2016). NBA steals leader (2019). NBA Most Improved Player (2013). NBA All-Rookie Second Team (2011)."
+    
   }
+  
   
 
   
@@ -110,7 +138,7 @@ function generateTeamCards() {
     }
 
     const card = document.createElement('div');
-    card.classList.add('col-md-3', 'mb-4', 'mx-auto');
+    card.classList.add('col-md-2', 'mb-4', 'mx-auto');
 
     let backgroundColor;
 
@@ -126,6 +154,7 @@ function generateTeamCards() {
         break;
       case 'oklahoma city thunder':
         backgroundColor = '#007AC1'; // Red for Heat
+      break;
         case 'new orleans hornets':
         backgroundColor = '#85714D'; // Red for Heat
         break;
