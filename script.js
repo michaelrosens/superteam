@@ -107,44 +107,45 @@ accomplishments: 'NBA Rookie of the Year (2006). 9x NBA All-Star (2008-2016). 4x
     accomplishments: "NBA All-Star (2016). NBA All-Star Game MVP (2015, 2016). NBA Most Valuable Player (2017). 2x NBA All-Star Game MVP (2015, 2016). 2x NBA scoring champion (2015, 2017). NBA assists leader (2018). NBA All-Rookie Second Team (2009)."
   },
   {
-    name: "2018 Paul George",
-    img: "imgs/pg.jpg",
-    team: "Oklahoma City Thunder",
-    position: "Small Forward",
-    skills: ["Scoring", "Defense", "Three-Point Shooting"],
-    statline: ["28.0 PPG", "8.2 RPG", "4.1 APG", "2.2 SPG"],
-    strengths: "Scoring versatility, Defensive prowess",
-    weaknesses: "Occasional inconsistency in shooting efficiency",
-    nickname: "PG13",
-    teammates: ["Russell Westbrook", "Steven Adams", "Carmelo Anthony"],
-    accomplishments: "NBA All-Star (2013, 2014, 2016, 2017, 2018). All-NBA Third Team (2013, 2016). NBA All-Defensive First Team (2014, 2016). NBA steals leader (2019). NBA Most Improved Player (2013). NBA All-Rookie Second Team (2011)."
+    name: "2020 Ben Simmons",
+    img: "imgs/simmons.webp",
+    team: "Philadelphia 76ers",
+    position: "Point Guard",
+    skills: ["Playmaking", "Defense", "Rebounding"],
+    statline: ["16.4 PPG", "7.8 RPG", "8.0 APG", "2.1 SPG"],
+    strengths: "Court vision, Defensive versatility",
+    weaknesses: "Shooting range",
+    nickname: "Benny",
+    teammates: ["Joel Embiid", "Tobias Harris", "Josh Richardson"],
+    accomplishments: "NBA All-Star (2019, 2020, 2021). All-NBA Third Team (2020). NBA All-Defensive First Team (2020, 2021). NBA Rookie of the Year (2018). NBA All-Rookie First Team (2018). NBA steals leader (2020)."
   },
   {
-      name: "2019 Kawhi Leonard",
-      img: "imgs/kawhi.jpg",
-      team: "Toronto Raptors",
-      position: "Small Forward",
-      skills: ["Scoring", "Defense", "Rebounding"],
-      statline: ["26.6 PPG", "7.3 RPG", "3.3 APG", "1.8 SPG"],
-      strengths: "Clutch performance, Elite defense",
-      weaknesses: "Load management, Occasional injury concerns",
-      nickname: "The Klaw",
-      teammates: ["Kyle Lowry", "Pascal Siakam", "Marc Gasol"],
-      accomplishments: "NBA Champion (2014, 2019). NBA Finals MVP (2014, 2019). NBA All-Star (2016, 2017, 2019). All-NBA First Team (2016, 2017). NBA All-Defensive First Team (2015, 2016, 2017). NBA Defensive Player of the Year (2015, 2016). NBA All-Rookie First Team (2012)."
+    name: "1980 Julius Erving",
+    img: "imgs/erving.jpg",
+    team: "Philadelphia 76ers",
+    position: "Power Forward",
+    skills: ["Scoring", "Athleticism", "Playmaking"],
+    statline: ["26.9 PPG", "7.4 RPG", "4.6 APG", "2.2 SPG"],
+    strengths: "High-flying dunks, Versatile scoring",
+    weaknesses: "Outside shooting",
+    nickname: "Dr. J",
+    teammates: ["Darryl Dawkins", "Maurice Cheeks", "Bobby Jones"],
+    accomplishments: "NBA Champion (1983). NBA Most Valuable Player (1981). NBA All-Star (1977–1987). All-NBA First Team (1978, 1980, 1981, 1982, 1983). All-NBA Second Team (1977, 1984). ABA Champion (1974, 1976). ABA Most Valuable Player (1974, 1975, 1976). ABA All-Star (1972–1976). ABA All-Time Team."
   },
-{
-  name: "2000 Shaquille O'Neal",
-  img: "imgs/shaq.jpg",
-  team: "Los Angeles Lakers",
-  position: "Center",
-  skills: ["Scoring", "Rebounding", "Shot Blocking"],
-  statline: ["29.7 PPG", "13.6 RPG", "3.8 APG", "3.0 BPG"],
-  strengths: "Dominant post presence, Physicality",
-  weaknesses: "Free-throw shooting, Three-point shooting",
-  nickname: "Diesel",
-  teammates: ["Kobe Bryant", "Glen Rice", "Ron Harper"],
-  accomplishments: "NBA Champion (2000, 2001, 2002, 2006). NBA Finals MVP (2000, 2001, 2002). NBA Most Valuable Player (2000). NBA All-Star (1993–1998, 2000–2007, 2009). All-NBA First Team (1998, 2000–2006). NBA All-Defensive Second Team (2000, 2001, 2003). NBA Rookie of the Year (1993). NBA All-Rookie First Team (1993)."
-}
+  {
+    name: "2001 Ben Wallace",
+    img: "imgs/ben_wallace.jpg",
+    team: "Detroit Pistons",
+    position: "Center",
+    skills: ["Defense", "Rebounding", "Shot Blocking"],
+    statline: ["6.4 PPG", "13.2 RPG", "1.5 APG", "2.3 BPG", "1.3 SPG"],
+    strengths: "Defensive prowess, Rebounding",
+    weaknesses: "Scoring ability",
+    nickname: "Big Ben",
+    teammates: ["Jerry Stackhouse", "Richard Hamilton", "Clifford Robinson"],
+    accomplishments: "4x NBA Defensive Player of the Year (2002, 2003, 2005, 2006). NBA Champion (2004). 5x NBA All-Star (2003–2006, 2008). 5x All-NBA Team selection. 6x NBA All-Defensive Team selection. NBA All-Rookie Second Team (1997)."
+  }
+  
 
   
   
@@ -190,6 +191,9 @@ function generateTeamCards() {
         case 'los angeles lakers':
           backgroundColor = '#FDB927'; // Red for Bulls
           break;
+          case 'detroit pistons':
+            backgroundColor = '#1D42BA'; // Red for Bulls
+            break;
       default:
         backgroundColor = '#6c757d'; // Gray for other teams
     }
