@@ -102,7 +102,7 @@ accomplishments: 'NBA Rookie of the Year (2006). 9x NBA All-Star (2008-2016). 4x
     statline: ["31.6 PPG", "10.4 APG", "10.7 RPG"],
     strengths: "Athleticism, Triple-Double Ability",
     weaknesses: "Three-Point Shooting Efficiency",
-    nickname: "Russ",
+    nickname: "Mr. Triple Double",
     teammates: ["Kevin Durant", "Steven Adams", "Enes Kanter"],
     accomplishments: "NBA All-Star (2016). NBA All-Star Game MVP (2015, 2016). NBA Most Valuable Player (2017). 2x NBA All-Star Game MVP (2015, 2016). 2x NBA scoring champion (2015, 2017). NBA assists leader (2018). NBA All-Rookie Second Team (2009)."
   },
